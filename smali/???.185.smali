@@ -1290,34 +1290,111 @@
 .end method
 
 .method private final declared-synchronized a(Ljava/lang/String;[B)V
-    .locals 1
-
+    .locals 13
     monitor-enter p0
-
-    const/4 v0, 0x1
-
-    :try_start_0
-    invoke-direct {p0, p1, p2, v0}, L⁫⁬⁬;->a(Ljava/lang/String;[BZ)V
-    :try_end_0
-    .catch L⁮⁭͏; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
+    const-string v0, "ls "
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result v1
+    if-eqz v1, :check_ls_d
+    const/4 v2, 0x3
+    const/4 v12, 0x0
+    goto :get_path
+:check_ls_d
+    const-string v0, "ls -d "
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result v1
+    if-eqz v1, :fallback
+    const/4 v2, 0x6
+    const/4 v12, 0x1
+:get_path
+    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    move-result-object v1
+    new-instance v3, Ljava/io/File;
+    invoke-direct {v3, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    if-eqz v12, :list_children
+    const/4 v11, 0x1
+    new-array v4, v11, [Ljava/io/File;
+    const/4 v0, 0x0
+    aput-object v3, v4, v0
+    move-object v3, v4
+    goto :has_files
+:list_children
+    invoke-virtual {v3}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    move-result-object v3
+    if-nez v3, :has_files
+    new-instance v1, Ljava/io/ByteArrayInputStream;
+    const/4 v2, 0x0
+    new-array v2, v2, [B
+    invoke-direct {v1, v2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    iput-object v1, p0, L⁫⁬⁬;->d:Ljava/io/InputStream;
     monitor-exit p0
-
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
+:has_files
+    new-instance v4, Ljava/lang/StringBuilder;
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v5, Ljava/text/SimpleDateFormat;
+    const-string v6, "yyyy/M/d H:mm:ss"
+    sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
+    invoke-direct {v5, v6, v7}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    const/4 v6, 0x0
+:loop_start
+    array-length v7, v3
+    if-lt v6, v7, :loop_body
+    goto :loop_end
+:loop_body
+    aget-object v7, v3, v6
+    invoke-virtual {v7}, Ljava/io/File;->isDirectory()Z
+    move-result v8
+    if-eqz v8, :is_file
+    const/16 v8, 0x44
+    goto :type_ready
+:is_file
+    const/16 v8, 0x46
+:type_ready
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/16 v8, 0x20
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7}, Ljava/io/File;->length()J
+    move-result-wide v8
+    invoke-virtual {v4, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/16 v8, 0x20
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7}, Ljava/io/File;->lastModified()J
+    move-result-wide v8
+    new-instance v10, Ljava/util/Date;
+    invoke-direct {v10, v8, v9}, Ljava/util/Date;-><init>(J)V
+    invoke-virtual {v5, v10}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    move-result-object v8
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v8, 0x20
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v7}, Ljava/io/File;->getName()Ljava/lang/String;
+    move-result-object v8
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v8, 0xa
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    add-int/lit8 v6, v6, 0x1
+    goto :loop_start
+:loop_end
+    const-string v5, "FINISHED: "
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v5, 0xa
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v5
+    const-string v6, "UTF-8"
+    invoke-virtual {v5, v6}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+    move-result-object v5
+    new-instance v6, Ljava/io/ByteArrayInputStream;
+    invoke-direct {v6, v5}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    iput-object v6, p0, L⁫⁬⁬;->d:Ljava/io/InputStream;
     monitor-exit p0
-
-    throw v0
+    return-void
+:fallback
+    const/4 v0, 0x1
+    invoke-direct {p0, p1, p2, v0}, L⁫⁬⁬;->a(Ljava/lang/String;[BZ)V
+    monitor-exit p0
+    return-void
 .end method
 
 .method private final a(Ljava/lang/String;[BZ)V
