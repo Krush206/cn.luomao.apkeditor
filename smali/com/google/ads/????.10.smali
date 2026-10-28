@@ -1,0 +1,2 @@
+.class public Lcom/google/ads/͏ﾠ͏͏;
+.super Ljava/lang/RuntimeException;

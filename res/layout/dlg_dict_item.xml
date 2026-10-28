@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/scrollView1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/linearLayout2" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="@dimen/text_size_normal" android:id="@id/textFrom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dp" android:layout_marginTop="6.0dp" android:layout_marginRight="6.0dp" android:text="From" android:inputType="textMultiLine" />
+            <EditText android:textSize="@dimen/text_size_normal" android:id="@id/textTo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dp" android:layout_marginTop="6.0dp" android:layout_marginRight="6.0dp" android:text="To" android:inputType="textMultiLine">
+                <requestFocus />
+            </EditText>
+            <LinearLayout android:layout_gravity="center_horizontal" android:id="@id/linearLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <Button android:id="@id/btnCancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="80.0sp" android:text="@string/str_cancel" />
+                <Button android:id="@id/btnOk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="80.0sp" android:text="@string/str_ok" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

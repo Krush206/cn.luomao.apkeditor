@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:padding="@dimen/padding_normal" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.luomao.component.LmFixedImageView android:id="@id/imgFileIcon" android:layout_width="@dimen/icon_size" android:layout_height="@dimen/icon_size" android:layout_marginRight="@dimen/margin_normal" android:src="@drawable/ic_main" />
+    <TextView android:textAppearance="@style/text_appearance_primary_normal" android:textColor="@drawable/text_primary_color_selector" android:gravity="center_vertical" android:id="@id/txtFileName" android:paddingTop="@dimen/padding_smaller" android:paddingBottom="@dimen/padding_smaller" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_app_name" android:layout_toRightOf="@id/imgFileIcon" android:layout_alignParentTop="true" />
+    <TextView android:textAppearance="@style/text_appearance_secondary_smaller" android:id="@id/txtFileAttribute" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_app_name" android:layout_toRightOf="@id/imgFileIcon" android:layout_below="@id/txtFileName" />
+    <TextView android:textAppearance="@style/text_appearance_minor_smaller" android:id="@id/txtTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dp" android:text="@string/str_app_name" android:layout_below="@id/txtFileName" android:layout_alignParentRight="true" />
+</RelativeLayout>

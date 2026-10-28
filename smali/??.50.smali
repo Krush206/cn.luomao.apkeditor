@@ -1,0 +1,2 @@
+.class public Lﾠ⁪;
+.super Ljava/lang/RuntimeException;

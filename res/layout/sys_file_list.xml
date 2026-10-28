@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/text_appearance_primary_smaller" android:gravity="center_vertical" android:id="@id/textCurrentDirectory" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="3.0dp" android:text="@string/str_app_name" />
+    <ListView android:id="@id/fileListView" android:layout_width="match_parent" android:layout_height="match_parent" android:listSelector="@drawable/list_selector_background" android:divider="@drawable/divider_horizontal_dark_opaque" />
+</LinearLayout>

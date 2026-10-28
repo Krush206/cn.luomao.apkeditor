@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/padding_normal" android:paddingRight="@dimen/padding_normal" android:paddingBottom="@dimen/padding_normal" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/text_appearance_primary_normal" android:textColor="@drawable/text_primary_color_selector" android:gravity="top" android:layout_gravity="top" android:id="@id/txtOriginal" android:paddingLeft="@dimen/padding_normal" android:paddingTop="@dimen/padding_normal" android:paddingRight="@dimen/padding_normal" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <EditText android:textSize="@dimen/text_size_normal" android:id="@id/txtTranslated" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine" />
+</LinearLayout>

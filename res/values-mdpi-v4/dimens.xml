@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="icon_size">40.0px</dimen>
+    <dimen name="btn_min_size">32.0px</dimen>
+    <dimen name="text_size_normal">13.0px</dimen>
+    <dimen name="text_size_smaller">11.0px</dimen>
+    <dimen name="margin_normal">4.0px</dimen>
+    <dimen name="margin_smaller">2.0px</dimen>
+    <dimen name="padding_normal">4.0px</dimen>
+    <dimen name="padding_smaller">2.0px</dimen>
+    <dimen name="prefered_list_height">56.0px</dimen>
+</resources>

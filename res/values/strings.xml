@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="str_about_context">"Version: APK Tool Premium V2.6
+Developer: Maocai Luo
+E-mail:
+Luomao2000@tom.com
+Luomao1977@sina.com
+Location:
+zntx.cc
+zntx.net
+QQ: 377803226
+You can directly edit the APK file now!
+Any problem or suggestion, please send it by e-mail to the developer.
+             ━━━━━━━━━━━
+And a modified version Mkirkh and expressing
+By: Ahmed Al-Harbi
+Our Twitter: upscale Android
+Twitter: AndroidUpscale
+             ━━━━━━━━━━━"</string>
+    <string name="str_disclaimer_context">"Author Maocai Luo
+Tested this application as much as he could on the hardware. But it does not guarantee that works correctly on each device, which is not responsible for any damage to the device output from your use of this application.
+
+Use it at your own risk."</string>
+    <string name="str_res_item_lock">"The unregistered version can only edit the first two pages. Please register to open the rest of the pages and edit them.
+(Menu -> Help -> How to register)"</string>
+    <string name="str_trial_limit">"Sorry, the beta version does not support this feature. Please register to unlock this feature.
+(Menu -> Help -> How to register)"</string>
+    <string name="str_cannot_be_empty">Should not be an empty string!</string>
+    <string name="str_app_name">APK Tool Premium</string>
+    <string name="str_search_type_dec">Decimal</string>
+    <string name="str_search_type_hex">Hex</string>
+    <string name="str_exception_found">Exception found</string>
+    <string name="str_search">Search</string>
+    <string name="str_loading">Loading ...</string>
+    <string name="str_saving">Saving ...</string>
+    <string name="str_found_nothing">Nothing found</string>
+    <string name="str_query_save_changed">The file has been changed, do you want save it?</string>
+    <string name="str_query_delete_file">Delete file?</string>
+    <string name="str_query_overwrite_file">Overwrite file?</string>
+    <string name="str_query_update_dict">Do you want to update the changes to the dictionary?</string>
+    <string name="str_need_dictionary">Please add some dictionaries.</string>
+    <string name="str_invalid_dict">The file is invalid or is not a dictionary.</string>
+    <string name="str_failed">Failed</string>
+    <string name="str_ok">OK</string>
+    <string name="str_cancel">Cancel</string>
+    <string name="str_error_same_string">All strings must be unique. Were found same strings on the following places:</string>
+    <string name="str_no_editable_text">Text not editable</string>
+    <string name="str_resource_category">Category</string>
+    <string name="str_resource_branch">Branches of resources</string>
+    <string name="str_google_translate">Google translator</string>
+    <string name="str_translate_from">From</string>
+    <string name="str_translate_to">To</string>
+    <string name="str_error_same_language">\"From\" and \"To\" must be different.</string>
+    <string name="str_error_parse_failed">Error parsing the file</string>
+    <string name="str_translate">Translate</string>
+    <string name="str_translate_this_page">Translate this page</string>
+    <string name="str_translate_all_pages">Translate all pages</string>
+    <string name="str_translating">Translating ...</string>
+    <string name="str_translate_settings">Translator settings</string>
+    <string name="str_settings_default_start_folder">Default start folder</string>
+    <string name="str_settings_display_hidden_file">Display hidden files</string>
+    <string name="str_menu_save">Save</string>
+    <string name="str_menu_delete">Delete</string>
+    <string name="str_menu_rename">Rename</string>
+    <string name="str_menu_move_to">Move to ...</string>
+    <string name="str_menu_copy">Copy</string>
+    <string name="str_menu_copy_to">Copy to ...</string>
+    <string name="str_menu_create_folder">Create folder</string>
+    <string name="str_menu_help">Help</string>
+    <string name="str_menu_home_page">Home page</string>
+    <string name="str_menu_about">About</string>
+    <string name="str_menu_disclaimer">Disclaimer</string>
+    <string name="str_menu_back">Back</string>
+    <string name="str_menu_exit">Exit</string>
+    <string name="str_menu_how_to_register">How to register</string>
+    <string name="str_menu_replace">Replace</string>
+    <string name="str_menu_extract_to">Extract to ...</string>
+    <string name="str_menu_extract_here">Extract here</string>
+    <string name="str_menu_use_dictionary">Use dictionary</string>
+    <string name="str_menu_create_dict">Create dictionary</string>
+    <string name="str_menu_add_dict">Add dictionary</string>
+    <string name="str_menu_view">View</string>
+    <string name="str_menu_install">Install</string>
+    <string name="str_menu_sign">Recompile</string>
+    <string name="str_menu_import_license">Import licence</string>
+    <string name="str_menu_dict_manage">Dictionary manager</string>
+    <string name="str_menu_clone">Clone</string>
+    <string name="str_menu_settings">Settings</string>
+    <string name="str_menu_open_by_system">Open by system</string>
+    <string name="str_menu_compress">Compress/Compile</string>
+    <string name="str_press_again_exit">Press again to exit</string>
+</resources>

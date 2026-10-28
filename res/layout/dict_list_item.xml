@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:padding="@dimen/padding_normal" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/text_appearance_primary_normal" android:textColor="@drawable/text_primary_color_selector" android:gravity="center_vertical" android:id="@id/txtFileName" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="TextView" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="right" android:id="@id/btnDelete" android:background="@drawable/btn_bg_selector" android:padding="@dimen/padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_delete" />
+</LinearLayout>
