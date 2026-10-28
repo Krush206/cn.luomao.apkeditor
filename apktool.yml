@@ -13,3 +13,4 @@ resourcesInfo:
   packageId: 127
 doNotCompress:
 - png
+  resourcesAreCompressed: false
